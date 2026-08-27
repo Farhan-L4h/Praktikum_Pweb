@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #1d5b8a;
+    background-color: #444;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -68,10 +68,11 @@ section h2 {
 }
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
-main section:nth-of-type(2) {
+main section .kartu-statistik {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 main section:nth-of-type(2) article {
@@ -134,6 +135,12 @@ td button:first-of-type {
 
 td button:last-of-type {
     background-color: #d9534f;
+    color: #fff;
+}
+
+/* ===== Detail Button ===== */
+.detail-btn {
+    background-color: #5bc0de;
     color: #fff;
 }
 
