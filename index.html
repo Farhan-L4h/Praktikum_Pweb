@@ -1,68 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- resposifitas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>SIMPUS-Mini | Beranda</title>
     <!-- menammbahkan CSS -->
-    <link rel="stylesheet" href="asset/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body>
     <header>
-        <!-- Judul -->
-        <h1>SIMPUS-Mini</h1>
+      <!-- Judul -->
+      <h1>SIMPUS-Mini</h1>
 
-        <!-- Navbar -->
-        <nav>
-            <ul>
-                <!-- List Navbar -->
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="buku/list.html">Daftar Buku</a></li>
-                <li><a href="buku/tambah.html">Tambah Buku</a></li>
-                <li><a href="anggota/list.html">Daftar Anggota</a></li>
-                <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
-            </ul>
-        </nav>
+      <!-- Hamburger -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+
+      <!-- Navbar -->
+      <nav>
+        <ul>
+          <!-- List Navbar -->
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="buku/list.html">Daftar Buku</a></li>
+          <li><a href="buku/tambah.html">Tambah Buku</a></li>
+          <li><a href="anggota/list.html">Daftar Anggota</a></li>
+          <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Konten -->
     <main>
+      <!-- Konten 1 -->
+      <section>
+        <h2>Selamat Datang di Sistem Perpustakaan Mini</h2>
+        <p>
+          Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.
+        </p>
+      </section>
 
-        <!-- Konten 1 -->
-        <section>
-            <h2>Selamat Datang di Sistem Perpustakaan Mini</h2>
-            <p>Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-        </section>
+      <!-- Konten 2 -->
+      <section class="statistik">
+        <h2>Ringkasan</h2>
 
-        <!-- Konten 2 -->
-        <section class="statistik">
-            <h2>Ringkasan</h2>
-
-            <div class="kartu-statistik">
-                <article>
-                    <h3>Total Buku</h3>
-                    <p>12</p>
-                </article>
-                <article>
-                    <h3>Total Anggota</h3>
-                    <p>8</p>
-                </article>
-                <article>
-                    <h3>Sedang Dipinjam</h3>
-                    <p>3</p>
-                </article>
-                <article>
-                    <h3>Terlambat</h3>
-                    <p>9</p>
-                </article>
-            </div>
-        </section>
-
+        <div class="kartu-statistik">
+          <article>
+            <h3>Total Buku</h3>
+            <p>12</p>
+          </article>
+          <article>
+            <h3>Total Anggota</h3>
+            <p>8</p>
+          </article>
+          <article>
+            <h3>Sedang Dipinjam</h3>
+            <p>3</p>
+          </article>
+          <article>
+            <h3>Terlambat</h3>
+            <p>9</p>
+          </article>
+        </div>
+      </section>
     </main>
 
     <!-- footer -->
     <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
+      <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
     </footer>
-</body>
+  </body>
 </html>
