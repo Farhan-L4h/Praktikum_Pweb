@@ -159,11 +159,38 @@ form label {
 form input,
 form select {
   width: 100%;
-  max-width: 400px;
   padding: 0.55rem 0.7rem;
   border: 1px solid #cdd4da;
   border-radius: 4px;
   font-size: 1rem;
+  display: block;
+}
+
+
+/* Radio Input */
+form input[type="radio"] {
+  width: auto;
+  max-width: none;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 1rem;
+}
+
+.radio-option label {
+  display: inline;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.status-label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: #444;
 }
 
 form button[type="submit"] {
@@ -174,6 +201,7 @@ form button[type="submit"] {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
+  
 }
 
 form button[type="submit"]:hover {
@@ -206,6 +234,11 @@ footer {
 
 .form-section h2 {
   text-align: center;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* ===== Hamburger Menu (checkbox hack) ===== */

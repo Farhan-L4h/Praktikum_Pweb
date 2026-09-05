@@ -22,7 +22,6 @@
           <li><a href="../Buku/list.html">Daftar Buku</a></li>
           <li><a href="../Buku/tambah.html">Tambah Buku</a></li>
           <li><a href="list.html">Daftar Anggota</a></li>
-          <li><a href="tambah.html">Tambah Anggota</a></li>
         </ul>
       </nav>
     </header>
@@ -55,18 +54,22 @@
             <input type="text" id="no_hp" name="no_hp" />
           </p>
           <p>
-            <!-- TAmbahan status -->
-            <label for="status">Status</label><br />
-            <select id="status" name="status">
-              <option value="aktif">Aktif</option>
-              <option value="non-aktif">Non-Aktif</option>
-            </select>
+            <!-- Tambahan status -->
+            <span class="status-label">Status</span><br />
+            <span class="radio-option">
+              <input type="radio" id="aktif" name="status" value="aktif" checked />
+              <label for="aktif">Aktif</label>
+            </span>
+            <span class="radio-option">
+              <input type="radio" id="non-aktif" name="status" value="non-aktif" />
+              <label for="non-aktif">Non-Aktif</label>
+            </span>
           </p>
 
-          <p>
+          <div class="form-actions">
             <!-- confirm -->
             <button type="submit">Simpan</button>
-          </p>
+          </div>
         </form>
       </section>
     </main>
