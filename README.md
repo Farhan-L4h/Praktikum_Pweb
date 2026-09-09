@@ -1,3 +1,14 @@
+# LAPORAN PRAKTIKUM
+
+**Nama:** Muhammad Farhan <br>
+**NIM:** 264107027002 <br>
+**Kelas:** TI 2G <br>
+**No:** 14
+
+<br>
+
+# Jobsheet 1
+
 ## 7.4 Ide Latihan Tambahan (Opsional)
 
 1. **Lengkapi konsistensi menu** — tambahkan tautan "Daftar Anggota" dan
@@ -10,6 +21,8 @@
 4. **Tambah field baru** di form tambah anggota, misalnya "Email"
    memakai `<input type="email">` (`type="email"` otomatis memvalidasi
    format alamat email tanpa perlu JavaScript tambahan).
+
+# Jobsheet 2
 
 ## 10.4 Ide Latihan Tambahan (Opsional)
 
@@ -27,3 +40,28 @@
 4. **Uji responsivitas sederhana** — perkecil lebar jendela browser
    secara bertahap sampai sangat sempit (seperti lebar HP), amati kapan
    `flex-wrap: wrap` pada navbar mulai memindahkan menu ke baris baru. (Terjadi Warp Saat Ukuran Layar Sudah Menyempit jadi konten bakal menyusun ke bawah)
+
+
+
+<br>
+<br>
+
+# Jobsheet 3 — Responsive Design
+
+Sub-CPMK: Membangun tampilan responsif.
+
+## Perubahan dari Jobsheet 2
+- Tambah `<meta name="viewport">` di semua halaman.
+- Navbar: hamburger menu memakai teknik **checkbox hack** murni CSS (`input[type=checkbox] + label`), aktif di layar ≤480px. **(Sudah)**
+- Tabel dibungkus `<div class="table-responsive">` agar bisa di-scroll horizontal di layar sempit. **(Sudah)**
+- Tambah media query di `style.css`: grid kartu statistik 3 → 2 → 1 kolom mengikuti breakpoint tablet/mobile. **(Sudah)**
+
+
+# Jobsheet 4 — UI/UX Design
+
+## Perubahan dari Jobsheet 3
+- Tidak ada perubahan kode — halaman HTML/CSS tetap sama persis dengan Jobsheet 3.
+- Tambah `docs/wireframe.md`: wireframe teks + user flow untuk fitur yang **belum dibangun** (Login, Dashboard Petugas, Peminjaman, Pengembalian, Riwayat). **(Sudah)**
+
+<br>
+<br>
