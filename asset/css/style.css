@@ -75,20 +75,20 @@ main section .kartu-statistik {
   flex-wrap: wrap;
 }
 
-main section:nth-of-type(2) article {
+.statistik article {
   background-color: #e2e6ea;
   border-radius: 8px;
   padding: 1.25rem;
   text-align: center;
 }
 
-main section:nth-of-type(2) article h3 {
+.statistik article h3 {
   font-size: 0.95rem;
   color: #55677a;
   margin-bottom: 0.5rem;
 }
 
-main section:nth-of-type(2) article p {
+.statistik article p {
   font-size: 1.8rem;
   font-weight: 700;
   color: #444;
@@ -275,6 +275,47 @@ footer {
   font-size: 1.6rem;
   color: #fff;
   cursor: pointer;
+}
+
+/* petugas */
+.btn-action {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.btn-action a {
+  text-decoration: none;
+}
+
+.petugas-statistik {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.petugas-statistik article {
+  background-color: #e2e6ea;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.petugas-statistik article h3 {
+  font-size: 0.95rem;
+  color: #55677a;
+  margin-bottom: 0.5rem;
+}
+
+.petugas-statistik article p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #444;
 }
 
 /* ===== Responsive Breakpoints ===== */
