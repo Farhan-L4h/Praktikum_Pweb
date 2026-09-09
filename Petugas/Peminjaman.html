@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMPUS-Mini | Pinjam Buku</title>
+    <!-- menammbahkan CSS -->
+    <link rel="stylesheet" href="../asset/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>SIMPUS-Mini</h1>
+
+      <!-- Hamburger -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+
+      <nav>
+        <ul>
+          <!-- List Navbar -->
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="../buku/list.html">Daftar Buku</a></li>
+          <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+
+          <!-- akun info -->
+          <li>
+            <a href=""><b>(Farhan Cuy)</b></a> / <a href="">logout</a>
+          </li>
+      </nav>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Pinjam Buku</h2>
+
+        <!-- form -->
+        <form>
+          <p>
+            <label for="anggota">Anggota</label><br />
+            <select id="anggota" name="anggota" required>
+              <option value="">Pilih anggota</option>
+              <option value="A001">Siti Aminah</option>
+              <option value="A002">Budi Santoso</option>
+              <option value="A003">Rina Wijaya</option>
+              <option value="A004">Agus Prasetyo</option>
+              <option value="A005">Linda Kurnia</option>
+            </select>
+          </p>
+          <p>
+            <label for="buku">Buku</label><br />
+            <select id="buku" name="buku" required>
+              <option value="">Pilih buku</option>
+              <option value="laskar-pelangi">Laskar Pelangi</option>
+              <option value="bumi-manusia">Bumi Manusia</option>
+              <option value="filosofi-teras">Filosofi Teras</option>
+              <option value="ronggeng-dukuh-paruk">Ronggeng Dukuh Paruk</option>
+              <option value="python-for-kids">Python for Kids</option>
+              <option value="bocoran-pertanyaan-alam-kubur">
+                Bocoran pertanyaan alam kubur
+              </option>
+            </select>
+          </p>
+          <p>
+            <label for="tgl_pinjam">Tgl Pinjam</label><br />
+            <input type="date" id="tgl_pinjam" name="tgl_pinjam" min="0" required />
+          </p>
+          <p>
+             <div class="form-actions">
+            <!-- confirm -->
+            <button type="submit">Simpan</button>
+          </div>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
+    </footer>
+  </body>
+</html>
