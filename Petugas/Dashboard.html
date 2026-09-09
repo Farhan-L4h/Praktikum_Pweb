@@ -33,13 +33,17 @@
           <li>
             <a href=""><b>(Farhan Cuy)</b></a> / <a href="">logout</a>
           </li>
-          
         </ul>
       </nav>
     </header>
 
     <main>
-
+    <section>
+         <h2>Dashboard Petugas</h2>
+        <p>
+          Panel Dashboard Sederhana untuk mengelola Peminjaman buku dan Pengembalian buku perpustakaan.
+        </p>
+    </section>
       <section class="statistik">
         <h2>Ringkasan</h2>
         <div class="petugas-statistik">
@@ -52,17 +56,68 @@
             <p>8</p>
           </article>
           <article>
-            <h3>Total Pinjaman</h3>
+            <h3>Sedang Dipinjaman</h3>
             <p>3</p>
           </article>
         </div>
       </section>
-      
+
       <section>
         <h2>Aksi Cepat</h2>
-        <button class="btn-action"><a href="pinjam.html" style="color: white;">Pinjam</a></button>
-        <button class="btn-action"><a href="pengembalian.html" style="color: white;">Pengembalian</a></button>
-    </section>
+        <button class="btn-action">
+          <a href="pinjam.html" style="color: white">Pinjam</a>
+        </button>
+        <button class="btn-action">
+          <a href="pengembalian.html" style="color: white">Pengembalian</a>
+        </button>
+      </section>
+
+      <section>
+        <h2>Transkasi Baru</h2>
+
+        <div class="table-responsive">
+            <table>
+              <!-- header table -->
+              <thead>
+                <tr>
+                  <th>No. Anggota</th>
+                  <th>Anggota</th>
+                  <!-- tambahan email -->
+                  <th>Buku</th>
+                  <th>TGL-Pinjam</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+    
+              <!-- body table / isi -->
+              <tbody>
+                  <tr>
+                    <td>A001</td>
+                    <td>Siti Aminah</td>
+                    <td>Laskar Pelangi</td>
+                    <td>21-7-2026</td>
+                    <td>Pinjam</td>
+                    <td>
+                      <button type="button">Edit</button>
+                      <button type="button">Hapus</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>A002</td>
+                    <td>Farhan Hardiks</td>
+                    <td>Linux For Kids</td>
+                    <td>21-7-2026</td>
+                    <td>Kembali</td>
+                    <td>
+                      <button type="button">Edit</button>
+                      <button type="button">Hapus</button>
+                    </td>
+                  </tr>
+            </tbody>
+            </table>
+        </div>
+      </section>
     </main>
   </body>
 </html>
