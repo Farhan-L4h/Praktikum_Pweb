@@ -241,6 +241,30 @@ footer {
   justify-content: flex-end;
 }
 
+
+/* Logins */
+
+.login-panel {
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  background-color: #fff;
+}
+
+.Login-action button {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.login-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 /* ===== Hamburger Menu (checkbox hack) ===== */
 .nav-toggle {
   display: none;
