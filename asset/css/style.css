@@ -69,13 +69,15 @@ section h2 {
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
 main section .kartu-statistik {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
 .statistik article {
+  flex: 1 1 100px;
   background-color: #e2e6ea;
   border-radius: 8px;
   padding: 1.25rem;
@@ -295,12 +297,13 @@ footer {
 }
 
 .petugas-statistik {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .petugas-statistik article {
+  flex: 1 1 100px;
   background-color: #e2e6ea;
   border-radius: 8px;
   padding: 1.25rem;
