@@ -1,38 +1,23 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Tambah Buku</title>
-    <!-- menammbahkan CSS -->
-    <link rel="stylesheet" href="../asset/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>SIMPUS-Mini</h1>
+<?php
+$page_title = "Tambah Buku";
+include __DIR__ . '/../includes/header.php';
 
-      <!-- Hamburger -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
-
-      <nav>
-        <ul>
-          <li><a href="../index.html">Beranda</a></li>
-          <li><a href="list.html">Daftar Buku</a></li>
-          <li><a href="tambah.html">Tambah Buku</a></li>
-          <li><a href="../Anggota/list.html">Daftar Anggota</a></li>
-          <li><a href="../Anggota/tambah.html">Tambah Anggota</a></li>
-        </ul>
-      </nav>
-    </header>
+$flash = $_SESSION['flash'] ?? null;
+unset($_SESSION['flash']);
+?>
 
     <main>
       <section class="form-section">
         <h2>Tambah Buku</h2>
 
+        <?php if ($flash): ?>
+                <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['pesan']; ?></p>
+            <?php endif; ?>
+
+
         <!-- form -->
          <div class="table-responsive">
-           <form id="form-tambah" novalidate>
+           <form id="form-tambah" action="proses_tambah.php" method="post" novalidate>
              <p>
                <label for="judul">Judul</label><br />
                <input type="text" id="judul" name="judul" required />
@@ -77,11 +62,4 @@
            </form>
          </div>
       </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
-    </footer>
-  </body>
-     <script src="../asset/js/app.js"></script>
-</html>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
