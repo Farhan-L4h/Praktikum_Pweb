@@ -5,9 +5,33 @@ require __DIR__ . '/../includes/koneksi.php';
 
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
-$daftarAnggota = $_SESSION['anggota'] ?? [];
 
-$daftarAnggota = $pdo->query("SELECT * FROM anggota ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
+// Pagination
+$perPage = 5;
+$page = max(1, (int) ($_GET['page'] ?? 1));
+$offset = ($page - 1) * $perPage;
+$keyword = trim($_GET['q'] ?? '');
+
+// search
+if ($keyword !== '') {
+  $hitung = $pdo->prepare("SELECT COUNT(*) FROM anggota WHERE nama ILIKE :kw");
+  $hitung->execute(['kw' => '%' . $keyword . '%']);
+  $totalRows = $hitung->fetchColumn();
+
+  $stmt = $pdo->prepare("SELECT * FROM anggota WHERE nama ILIKE :kw ORDER BY id DESC LIMIT :limit OFFSET :offset");
+  $stmt->bindValue('kw', '%' . $keyword . '%');
+} else {
+  $totalRows = $pdo->query("SELECT COUNT(*) FROM anggota")->fetchColumn();
+  $stmt = $pdo->prepare("SELECT * FROM anggota ORDER BY id DESC LIMIT :limit OFFSET :offset");
+}
+$stmt->bindValue('limit', $perPage, PDO::PARAM_INT);
+$stmt->bindValue('offset', $offset, PDO::PARAM_INT);
+$stmt->execute();
+
+
+// fetch
+$daftarAnggota = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$totalPages = max(1, (int) ceil($totalRows / $perPage));
 
 ?>
 
@@ -21,11 +45,13 @@ $daftarAnggota = $pdo->query("SELECT * FROM anggota ORDER BY id DESC")->fetchAll
   <!-- Table -->
 
   <div class="search-box">
-    <label for="search-input">Cari Anggota</label>
-    <input
-      type="text"
-      id="search-input"
-      placeholder="Ketik judul buku..." />
+    <form method="get" action="list.php">
+      <span>
+        <label for="search-input">Cari Nama Anggota</label><br>
+        <input type="text" id="search-input" name="q" value="<?php echo $keyword; ?>" placeholder="Ketik nama anggota...">
+      </span>
+      <button type="submit">Cari</button>
+    </form>
   </div>
 
   <div class="table-responsive">
@@ -36,9 +62,9 @@ $daftarAnggota = $pdo->query("SELECT * FROM anggota ORDER BY id DESC")->fetchAll
           <th>No. Anggota</th>
           <th>Nama</th>
           <!-- tambahan email -->
-          <th>Email</th>
+          <!-- <th>Email</th> -->
           <th>Alamat</th>
-          <!-- <th>No. HP</th> -->
+          <th>No. HP</th>
           <!-- tambahan status -->
           <!-- <th>Status</th> -->
           <th>Aksi</th>
@@ -61,8 +87,11 @@ $daftarAnggota = $pdo->query("SELECT * FROM anggota ORDER BY id DESC")->fetchAll
               <td><?php echo $anggota['alamat']; ?></td>
               <td><?php echo $anggota['no_hp']; ?></td>
               <td>
-                <button type="button">Edit</button>
-                <button type="button" class="btn-hapus">Hapus</button>
+                <a href="edit.php?id=<?php echo $anggota['id']; ?>" class="btn-edit">Edit</a>
+                <form class="form-hapus" method="post" action="hapus.php">
+                  <input type="hidden" name="id" value="<?php echo $anggota['id']; ?>">
+                  <button type="submit" class="btn-hapus">Hapus</button>
+                </form>
               </td>
             </tr>
           <?php endforeach; ?>
@@ -70,6 +99,12 @@ $daftarAnggota = $pdo->query("SELECT * FROM anggota ORDER BY id DESC")->fetchAll
       </tbody>
     </table>
   </div>
+  <nav class="pagination">
+    <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+      <a href="list.php?page=<?php echo $i; ?><?php echo $keyword !== '' ? '&q=' . urlencode($keyword) : ''; ?>"
+        class="<?php echo $i === $page ? 'active' : ''; ?>"><?php echo $i; ?></a>
+    <?php endfor; ?>
+  </nav>
 </section>
 </main>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

@@ -158,3 +158,24 @@ Sub-CPMK: Menghubungkan aplikasi dengan basis data PostgreSQL.
 
 - `index.php`: kartu statistik Total Buku/Anggota kini `SELECT COUNT(*)` dari database (bukan dummy/session lagi).
 ![](./imgLaporan/Jobsheet8/Statistik%20Count.png)
+
+# Jobsheet 9 — CRUD Penuh
+
+Sub-CPMK: Membangun fitur CRUD pada proyek.
+
+## Perubahan dari Jobsheet 8
+- Tambah `buku/edit.php` + `buku/proses_edit.php`, `anggota/edit.php` + `anggota/proses_edit.php` — melengkapi Create+Read (Jobsheet 8) dengan **Update**.
+
+- Tambah `buku/hapus.php`, `anggota/hapus.php` — **Delete**, hanya menerima `POST` (bukan GET) agar tidak terpicu tidak sengaja lewat link/crawler.
+
+- Tombol Hapus di `list.php` sekarang berupa `<form class="form-hapus" method="post">` sungguhan (bukan lagi tombol `<button>` polos) — `app.js` (`initHapusConfirm`) diubah untuk konfirmasi di event `submit` (bisa `preventDefault()`), bukan `click`.
+
+- `buku/list.php` & `anggota/list.php`: tambah **pagination** (`LIMIT`/`OFFSET`, 5 baris/halaman) dan **pencarian server-side** (`WHERE judul/nama ILIKE :kw`) — form GET, menggantikan kolom cari client-side murni dari Jobsheet 5/6.
+
+### Buku
+![](./imgLaporan/Jobhseet9/edit%20Succes%20buku.png)
+![](./imgLaporan/Jobhseet9/delete%20Succes%20Buku.png)
+
+### Anggota 
+![](./imgLaporan/Jobhseet9/edit%20Succes%20anggota.png)
+![](./imgLaporan/Jobhseet9/delete%20Success%20anggota.png)
