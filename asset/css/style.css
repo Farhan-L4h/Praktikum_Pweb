@@ -254,9 +254,10 @@ footer {
 /* Logins */
 
 .login-panel {
+  padding-top: 20px;
   width: 100%;
   max-width: 420px;
-  margin: 0;
+  margin-top: 5rem;
   background-color: #fff;
 }
 
@@ -267,7 +268,6 @@ footer {
 }
 
 .login-main {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,6 +330,8 @@ footer {
   color: #444;
 }
 
+
+/* Search Peminjaman */
 .search-peminjaman {
   display: flex;
   align-items: stretch;
@@ -357,6 +359,8 @@ footer {
   background-color: #164869;
 }
 
+
+/* Pagination */
 .pagination {
     display: flex;
     gap: 0.5rem;
@@ -376,6 +380,7 @@ footer {
     border-color: #1d5b8a;
 }
 
+/* search box */
 .search-box form {
     display: flex;
     gap: 0.5rem;
