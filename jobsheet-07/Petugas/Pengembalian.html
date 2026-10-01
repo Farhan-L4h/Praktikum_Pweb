@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIMPUS-Mini | Pengembalian Buku</title>
+    <!-- menammbahkan CSS -->
+    <link rel="stylesheet" href="../asset/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>SIMPUS-Mini</h1>
+
+      <!-- Hamburger -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+
+      <nav>
+        <ul>
+          <!-- List Navbar -->
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="../buku/list.html">Daftar Buku</a></li>
+          <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+
+          <!-- akun info -->
+          <li>
+            <a href=""><b>(Farhan Cuy)</b></a> / <a href="">logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Cari Transaksi Aktif</h2>
+        <form>
+          <label for="search">Nama anggota / judul buku</label>
+          <div class="search-peminjaman">
+              <input type="search" id="search" name="search" />
+              <button type="submit">Cari</button>
+          </div>
+        </form>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>No. Anggota</th>
+                <th>Anggota</th>
+                <th>Buku</th>
+                <th>Tgl. Pinjam</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A001</td>
+                <td>Siti Aminah</td>
+                <td>Laskar Pelangi</td>
+                <td>21-07-2026</td>
+                <td>Pinjam</td>
+                <td>
+                  <button type="button">Kembalikan</button>
+                </td>
+              </tr>
+              <tr>
+                <td>A002</td>
+                <td>Farhan Hardisk</td>
+                <td>Linux For Kids</td>
+                <td>21-07-2026</td>
+                <td>Kembali</td>
+                <td>
+                  <button type="button">Kembalikan</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
+    </footer>
+  </body>
+</html>
