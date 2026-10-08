@@ -1,4 +1,4 @@
-# LAPORAN JOBSHEET 
+# LAPORAN JOBSHEET 13
 
 **Nama:** Muhammad Farhan <br>
 **NIM:** 264107023002 <br>
@@ -6,7 +6,7 @@
 **No:** 14
 
 
-# Deployment & Dokumentasi (SIMPUS-Mini)
+# Jobsheet 13 — Deployment & Dokumentasi (SIMPUS-Mini)
 
 Sub-CPMK: Mendeploy dan mendokumentasikan aplikasi.
 
@@ -91,20 +91,3 @@ jobsheet-13/
 ## Catatan
 - Seluruh berkas PHP telah dilolos-uji `php -l` (tanpa error sintaks). Sudah diverifikasi jalan end-to-end (Apache + PHP 8.3 + PostgreSQL 14.5 di Laragon), termasuk lewat virtual host langsung maupun bersarang di bawah domain proyek — lihat `Setup-Database-PostgreSQL-Laragon.md` di root repo untuk langkah setup database-nya.
 - Untuk presentasi UAS, siapkan penjelasan alasan desain teknis: mengapa struktur tabel dan alur transaksi peminjaman dirancang seperti ini (lihat `README.md` Jobsheet 12 untuk detail transaksi stok).
-# Daftar Jobsheet Praktikum
-
-Berikut adalah laporan yang dipisahkan berdasarkan jobsheet:
-
-- [Jobsheet 1](/jobsheet-01/laporan.md)
-- [Jobsheet 2](/jobsheet-02/laporan.md)
-- [Jobsheet 3](/jobsheet-03/laporan.md)
-- [Jobsheet 4](/jobsheet-04/laporan.md)
-- [Jobsheet 5](/jobsheet-05/laporan.md)
-- [Jobsheet 6](/jobsheet-06/laporan.md)
-- [Jobsheet 7](/jobsheet-07/laporan.md)
-- [Jobsheet 8](/jobsheet-08/laporan.md)
-- [Jobsheet 9](/jobsheet-09/laporan.md)
-- [Jobsheet 10](/jobsheet-10/laporan.md)
-- [Jobsheet 11](/jobsheet-11/laporan.md)
-- [Jobsheet 12](/jobsheet-12/laporan.md)
-- [Jobsheet 13](/jobsheet-13/laporan.md)
